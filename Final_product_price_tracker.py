@@ -42,7 +42,7 @@ def send_email(email_id, url, product_title, product_price):
     port = 587
     server = smtplib.SMTP(smtp_server, port)
     server.starttls()
-    server.login("wolverinexmen494@gmail.com", "ornhddbgvugfhzzb")
+    server.login("your email", "your email password")
 
     # Compose email message
     subject = "Price Alert!!!"
@@ -50,7 +50,7 @@ def send_email(email_id, url, product_title, product_price):
     msg = f"Subject: {subject}\n\n{body}"
 
     # Send email
-    server.sendmail("wolverinexmen494@gmail.com", email_id, msg)
+    server.sendmail("your email", email_id, msg)
     print("Email alert sent successfully!")
 
     # Close SMTP server
@@ -58,8 +58,8 @@ def send_email(email_id, url, product_title, product_price):
 
 
 def send_whatsapp_message(whatsapp_no, url, product_title, product_price, target_price):
-    account_sid = 'ACea64d2c93ab764e903089b16abb8003d'
-    auth_token = '77e727a298f13b40d46ca7a9bebfdb1c'
+    account_sid = 'your twilio acc sid'
+    auth_token = 'your twilio auth token'
     price_diff = (target_price - product_price)
     price_diff = float(price_diff)
     client = Client(account_sid, auth_token)
