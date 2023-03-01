@@ -5,7 +5,7 @@ from tkinter import *
 import threading
 from twilio.rest import Client
 
-
+#Check price
 def check_price():
     url = url_entry.get()
     target_price = float(price_entry.get())
@@ -74,10 +74,6 @@ def send_whatsapp_message(whatsapp_no, url, product_title, product_price, target
 # GUI Setup
 root = Tk()
 root.title("Product Price Tracker")
-
-labelcolor = 'gray'
-labelfont = ("Roboto", 12, "bold")
-headfont = ("Roboto", 20, "bold")
 
 url_label = Label(root, text="Product URL: ")
 url_label.grid(row=0, column=0)
